@@ -16,7 +16,7 @@ pipeline {
         }
       }
       stage ('unit-test') {
-          step {
+          steps {
           sh 'run gradle test'
          // junit 'build/reports/**/*.xml'
           }
