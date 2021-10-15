@@ -17,8 +17,11 @@ pipeline {
       }
       stage ('unit-test') {
           steps {
-          sh '$(gradle4)/bin/gradle test'
-          junit 'build/test-results/junit-platform/*.xml'
+          //sh '$(gradle4)/bin/gradle test'
+          //junit 'build/test-results/junit-platform/*.xml'
+        sh 'gradle test'
+        junit 'build/test-results/junit-platform/*.xml'
+        }
           }
       }
       stage ('func-test') {
