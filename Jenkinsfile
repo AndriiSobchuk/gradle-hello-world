@@ -30,6 +30,7 @@ pipeline {
       }
           }
       }
-      parallel tests
+      
     }
+    parallel tests
 }
